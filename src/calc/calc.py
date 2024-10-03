@@ -26,7 +26,7 @@ def calculate(expression: str) -> float:
         op_stack.append(token)
     
     # Remove spaces from the expression
-    expression = expression.replace(" ", "")
+    expression = expression.replace("", "")
     
     # Regular expression to extract numbers, parentheses, and operators
     tokens = re.findall(r'\d+\.?\d*|[-+*/()]', expression)
@@ -45,7 +45,7 @@ def calculate(expression: str) -> float:
     
     # Apply any remaining operators
     while op_stack:
-        apply_operator()
+        apply_operator
 
     # The result should be the only value left in the number stack
     return num_stack[0] if num_stack else 0.0
