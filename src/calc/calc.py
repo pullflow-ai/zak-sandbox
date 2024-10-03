@@ -21,18 +21,9 @@ def calculate(expression: str) -> float:
     
     # Helper function to process operator precedence and parentheses
     def process_operator(token):
-        if token == '(':
-            op_stack.append(token)  # Just push '(' to the operator stack
-        elif token == ')':
-            # Process the stack until '(' is found
-            while op_stack and op_stack[-1] != '(':
-                apply_operator()
-            op_stack.pop()  # Pop the '(' from the stack
-        else:
-            # Handle operator precedence
-            while op_stack and op_stack[-1] != '(' and operators.get(op_stack[-1]):
-                apply_operator()
-            op_stack.append(token)
+        while op_stack and op_stack[-1] != '(' and operators.get(op_stack[-1]):
+            apply_operator()
+        op_stack.append(token)
     
     # Remove spaces from the expression
     expression = expression.replace(" ", "")
