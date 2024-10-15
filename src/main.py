@@ -1,8 +1,8 @@
-MSG = "Hello world"
+GREETING_MESSAGE = "Hello world"
 
 def main():
     """Prints 'Hello, World!' to the console."""
-    print(MSG)
+    print(GREETING_MESSAGE)
 
 if __name__ == "__main__":
     main()
