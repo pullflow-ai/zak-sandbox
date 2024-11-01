@@ -1,8 +1,3 @@
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
 class UserManager {
   private users: User[] = [];
 
