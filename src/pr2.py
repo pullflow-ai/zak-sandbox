@@ -3,3 +3,6 @@ def do_nothing():
 
 def do_something():
   print("Something")
+
+def do_more():
+  print("More")
